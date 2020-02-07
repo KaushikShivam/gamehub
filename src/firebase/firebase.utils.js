@@ -15,6 +15,33 @@ const config = {
   measurementId: 'G-6NQXDETW8F'
 };
 
+// Take the auth object that we got from auth library
+export const createUserProfileDocument = async (userAuth, additionalData) => {
+  if (!userAuth) return;
+
+  // Check if the user exists in Firebase
+  const userRef = firestore.doc(`users/${userAuth.uid}`);
+  const snapShot = await userRef.get();
+
+  if (!snapShot.exists) {
+    const { displayName, email } = userAuth;
+    const createdAt = new Date();
+
+    try {
+      await userRef.set({
+        displayName,
+        email,
+        createdAt,
+        ...additionalData
+      });
+    } catch (error) {
+      console.log('Error creating user', error);
+    }
+  }
+
+  return userRef;
+};
+
 firebase.initializeApp(config);
 
 // Exporting auth and firestore
