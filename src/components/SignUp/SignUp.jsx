@@ -20,15 +20,36 @@ class SignUp extends Component {
     };
   }
 
-  // handleSubmit = e => {
-  //   e.preventDefault();
-  //   this.setState({ email: '', password: '' });
-  // };
+  handleSubmit = async e => {
+    const { displayName, email, password, confirmPassword } = this.state;
 
-  // handleChange = e => {
-  //   const { value, name } = e.target;
-  //   this.setState({ [name]: value });
-  // };
+    e.preventDefault();
+    if (password !== confirmPassword) {
+      alert("Passwords don't match");
+      return;
+    }
+
+    try {
+      const { user } = auth.createUserWithEmailAndPassword(email, password);
+      await createUserProfileDocument(user, { displayName });
+
+      this.setState({
+        displayName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      });
+    } catch (error) {
+      console.error(error);
+    }
+
+    this.setState({ email: '', password: '' });
+  };
+
+  handleChange = e => {
+    const { value, name } = e.target;
+    this.setState({ [name]: value });
+  };
 
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
