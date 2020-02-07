@@ -20,17 +20,22 @@ class SignUp extends Component {
     };
   }
 
-  handleSubmit = async e => {
+  handleSubmit = async event => {
+    event.preventDefault();
+
     const { displayName, email, password, confirmPassword } = this.state;
 
-    e.preventDefault();
     if (password !== confirmPassword) {
-      alert("Passwords don't match");
+      alert("passwords don't match");
       return;
     }
 
     try {
-      const { user } = auth.createUserWithEmailAndPassword(email, password);
+      const { user } = await auth.createUserWithEmailAndPassword(
+        email,
+        password
+      );
+
       await createUserProfileDocument(user, { displayName });
 
       this.setState({
@@ -42,8 +47,6 @@ class SignUp extends Component {
     } catch (error) {
       console.error(error);
     }
-
-    this.setState({ email: '', password: '' });
   };
 
   handleChange = e => {
