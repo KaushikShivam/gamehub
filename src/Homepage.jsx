@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Homepage = () => {
+import './Homepage.scss';
+
+const HomePage = () => {
   return (
-    <div className="Homepage">
+    <div className="homepage">
       <div className="directory-menu">
         <div className="menu-item">
           <div className="content">
@@ -39,4 +41,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;
