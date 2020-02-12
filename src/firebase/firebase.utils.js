@@ -59,6 +59,20 @@ export const addCollectionAndDocuments = async (
   await batch.commit();
 };
 
+// Get the snapshop and return data
+export const convertCollectionSnapshotToMap = collections => {
+  const transformedCollection = collections.docs.map(doc => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    };
+  });
+  console.log(transformedCollection);
+};
+
 // Exporting auth and firestore
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();
