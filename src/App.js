@@ -12,23 +12,14 @@ import SignInSignUp from './pages/SignInSignUp/SignInSignUp';
 import Header from './components/Header/Header';
 
 import { selectCurrentUser } from './redux/user/user.selectors';
-// import { selectCollectionsForPreview } from './redux/shop/shop.selectors';
+import { checkUserSession } from './redux/user/user.actions';
 
 class App extends Component {
   // unsubscribeFromAuth = null;
 
   componentDidMount() {
-    // this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-    //   if (userAuth) {
-    //     const userRef = await createUserProfileDocument(userAuth);
-    //     userRef.onSnapshot(snapshot => {
-    //       setCurrentUser({
-    //         id: snapshot.id,
-    //         ...snapshot.data()
-    //       });
-    //     });
-    //   }
-    //   setCurrentUser(userAuth);
+    const { checkUserSession } = this.props;
+    checkUserSession();
     // This is where you load the data
     // addCollectionAndDocuments(
     //   'collections',
@@ -65,4 +56,9 @@ class App extends Component {
 const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 });
-export default connect(mapStateToProps)(App);
+
+const mapDispatchToProps = dispatch => ({
+  checkUserSession: () => dispatch(checkUserSession())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
