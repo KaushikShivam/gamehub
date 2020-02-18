@@ -36,8 +36,8 @@ const App = ({ checkUserSession, currentUser }) => {
     <div>
       <GlobalStyle />
       <Header />
-      <Switch>
-        <Suspense fallback={<Spinner />}>
+      <Suspense fallback={<Spinner />}>
+        <Switch>
           <Route exact path="/" component={Homepage} />
           <Route path="/shop" component={Shop} />
           <Route exact path="/checkout" component={CheckOut} />
@@ -48,8 +48,8 @@ const App = ({ checkUserSession, currentUser }) => {
               currentUser ? <Redirect to="/" /> : <SignInSignUp />
             }
           />
-        </Suspense>
-      </Switch>
+        </Switch>
+      </Suspense>
     </div>
   );
 };

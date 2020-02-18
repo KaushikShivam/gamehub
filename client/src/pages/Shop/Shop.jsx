@@ -2,16 +2,16 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
+import Spinner from './../../components/Spinner/Spinner';
+
+import { fetchCollectionsStart } from './../../redux/shop/shop.actions';
+
 const CollectionsOverviewContainer = lazy(() =>
   import('./../../components/CollectionsOverview/CollectionsOverview.container')
 );
 const CollectionContainer = lazy(() =>
   import('../Collection/Collection.container')
 );
-
-import Spinner from './../../components/Spinner/Spinner';
-
-import { fetchCollectionsStart } from './../../redux/shop/shop.actions';
 
 const Shop = ({ match, fetchCollectionsStart }) => {
   useEffect(() => {
