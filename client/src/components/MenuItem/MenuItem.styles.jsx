@@ -14,9 +14,15 @@ export const MenuItemContainer = styled.div`
   background-size: cover;
   background-position: center;
 
-  /* @media screen and (max-width: 800px) {
-    height: 200px;
-  } */
+  @media screen and (max-width: 800px) {
+    height: 300px;
+    width: 40%;
+  }
+
+  @media screen and (max-width: 450px) {
+    height: 300px;
+    width: 100%;
+  }
 `;
 
 export const MenuContainer = styled.div`
@@ -38,6 +44,10 @@ export const RoleItem = styled.div`
   background-color: #6b4dc4;
   font-size: 16px;
   margin-right: 10px;
+
+  @media screen and (max-width: 800px) {
+    font-size: 10px;
+  }
 `;
 
 export const ContentContainer = styled.div`
@@ -47,6 +57,11 @@ export const ContentContainer = styled.div`
   margin-top: 1rem;
   flex-direction: ${({ size }) => (size ? 'row' : 'column-reverse')};
   justify-content: ${({ size }) => (size ? 'space-between' : 'flex-start')};
+
+  @media screen and (max-width: 800px) {
+    flex-direction: 'row';
+    justify-content: 'space-between';
+  }
 `;
 
 export const TitleContainer = styled.div``;
@@ -54,6 +69,10 @@ export const TitleContainer = styled.div``;
 export const ContentTitle = styled.div`
   font-weight: bold;
   font-size: ${({ size }) => (size ? '48px' : '30px')};
+
+  @media screen and (max-width: 800px) {
+    font-size: 24px;
+  }
 `;
 
 export const ContentSubtitle = styled.div`
@@ -64,10 +83,27 @@ export const PlayLogo = styled.div`
   width: 4rem;
   height: 4rem;
   margin-bottom: ${({ size }) => (size ? '' : '90px')};
-  align-self: flex-end;
+
+  @media screen and (max-width: 950px) {
+    margin-bottom: ${({ size }) => (size ? '' : '70px')};
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-bottom: 0;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  align-self: ${({ size }) => (size ? 'center' : 'flex-end')};
+
   img {
-    width: 100%;
-    height: 100%;
+    width: 4rem;
+    height: 4rem;
+
+    @media screen and (max-width: 800px) {
+      width: 3rem;
+      height: 3rem;
+    }
   }
 `;
 
