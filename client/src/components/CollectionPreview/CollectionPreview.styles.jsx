@@ -14,10 +14,10 @@ export const TitleContainer = styled.h1`
   font-size: 28px;
   margin-bottom: 25px;
   cursor: pointer;
-  background: -webkit-linear-gradient(#6b4dc4, #fb5050);
+  /* background: -webkit-linear-gradient(#6b4dc4, #fb5050);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 
   &:hover {
     color: grey;
