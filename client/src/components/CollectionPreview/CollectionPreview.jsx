@@ -16,6 +16,7 @@ const CollectionPreview = ({ title, items, history, match, routeName }) => {
         onClick={() => history.push(`${match.path}/${routeName}`)}
       >
         {title.toUpperCase()}
+        <span>View All</span>
       </TitleContainer>
       <PreviewContainer>
         {items

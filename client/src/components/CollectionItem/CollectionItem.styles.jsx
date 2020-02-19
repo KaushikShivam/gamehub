@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const CollectionItemContainer = styled.div`
-  width: 23.5vw;
   display: flex;
   flex-direction: column;
   height: 380px;
@@ -11,19 +10,6 @@ export const CollectionItemContainer = styled.div`
   background-position: center;
   justify-content: space-between;
   padding: 20px;
-  @media screen and (max-width: 800px) {
-    width: 40vw;
-
-    &:hover {
-      .image {
-        opacity: unset;
-      }
-
-      button {
-        opacity: unset;
-      }
-    }
-  }
 `;
 
 export const AddButton = styled.button`
