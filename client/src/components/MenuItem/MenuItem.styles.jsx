@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const MenuItemContainer = styled.div`
-  height: ${({ size }) => (size ? '380px' : '240px')};
-  min-width: 30%;
+  height: ${({ size }) => (size ? '380px' : '250px')};
+  width: ${({ size }) => (size ? '40%' : '20%')};
   overflow: hidden;
   flex: 1 1 auto;
   display: flex;
@@ -35,6 +35,7 @@ export const MenuItemContainer = styled.div`
 
   @media screen and (max-width: 800px) {
     height: 200px;
+    /* width: 50%; */
   }
 `;
 
