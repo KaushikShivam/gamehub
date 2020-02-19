@@ -9,7 +9,9 @@ export const MenuItemContainer = styled.div`
   border: 1px solid black;
   margin: 0 7.5px 15px;
   overflow: hidden;
-  background-image: ${({ imageUrl }) => `url(${imageUrl})`};
+  /* background-image: ${({ imageUrl }) => `url(${imageUrl})`}; */
+  background-image: ${({ imageUrl }) =>
+    `linear-gradient(rgba(255,255,255, 0.1), rgba(0,0,0, 0.9)), url(${imageUrl})`};
   cursor: pointer;
   background-size: cover;
   background-position: center;
