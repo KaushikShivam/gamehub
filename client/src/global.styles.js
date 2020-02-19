@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 	body {
-		font-family: 'Open Sans Condensed';
+		font-family: 'Roboto';
 		padding: 20px 20px;
     background-color: #132047;
     color: white;
