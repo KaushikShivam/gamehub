@@ -14,22 +14,17 @@ import Header from './components/Header/Header';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-const App = ({ checkUserSession, currentUser }) => {
+const App = ({ checkUserSession, currentUser, collectionsArray }) => {
   // unsubscribeFromAuth = null;
 
   useEffect(() => {
     checkUserSession();
+    //Add data here
+    // addCollectionAndDocuments(
+    //   'collections',
+    //   collectionsArray.map(({ title, items }) => ({ title, items }))
+    // );
   }, [checkUserSession]);
-
-  // componentDidMount() {
-  //   checkUserSession();
-  //   // This is where you load the data
-  //   // addCollectionAndDocuments(
-  //   //   'collections',
-  //   //   collections.map(({ title, items }) => ({ title, items }))
-  //   // );
-  //   // });
-  // }
 
   return (
     <div>

@@ -57,6 +57,7 @@ export const addCollectionAndDocuments = async (
   });
 
   await batch.commit();
+  console.log('DONE');
 };
 
 // Get the snapshop and return data

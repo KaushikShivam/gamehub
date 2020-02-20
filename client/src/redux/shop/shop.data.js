@@ -1,246 +1,497 @@
+import uuid from 'uuid/v4';
+
 const SHOP_DATA = {
-  hats: {
+  upcoming: {
     id: 1,
-    title: 'Hats',
-    routeName: 'hats',
+    title: 'Upcoming',
+    routeName: 'Upcoming',
     items: [
       {
-        id: 1,
-        name: 'Brown Brim',
-        imageUrl: 'https://i.ibb.co/ZYW3VTp/brown-brim.png',
-        price: 25
+        id: uuid(),
+        name: 'Cyberpunk 2077',
+        imageUrl: 'https://i.ibb.co/FhXFWvM/cyberpunk.jpg',
+        price: 90,
+        developer: 'CD Projekt',
+        publisher: 'CD Projekt Red'
       },
       {
-        id: 2,
-        name: 'Blue Beanie',
-        imageUrl: 'https://i.ibb.co/ypkgK0X/blue-beanie.png',
-        price: 18
+        id: uuid(),
+        name: 'Last Of Us 2',
+        imageUrl: 'https://i.ibb.co/ByMxhNy/last-of-us.jpg',
+        price: 80,
+        developer: 'Naughty Dog',
+        publisher: 'Sony Interactive'
       },
       {
-        id: 3,
-        name: 'Brown Cowboy',
-        imageUrl: 'https://i.ibb.co/QdJwgmp/brown-cowboy.png',
-        price: 35
+        id: uuid(),
+        name: 'Resident Evil 3',
+        imageUrl: 'https://i.ibb.co/6sPhFzp/resident.jpg',
+        price: 75,
+        developer: 'Capcom',
+        publisher: 'Capcom'
       },
       {
-        id: 4,
-        name: 'Grey Brim',
-        imageUrl: 'https://i.ibb.co/RjBLWxB/grey-brim.png',
-        price: 25
+        id: uuid(),
+        name: 'Watchdogs Legion',
+        imageUrl: 'https://i.ibb.co/VLXM2Wd/watchdogs.png',
+        price: 70,
+        developer: 'Ubisoft Toronto',
+        publisher: 'Ubisoft'
       },
       {
-        id: 5,
-        name: 'Green Beanie',
-        imageUrl: 'https://i.ibb.co/YTjW3vF/green-beanie.png',
-        price: 18
+        id: uuid(),
+        name: 'Outriders',
+        imageUrl: 'https://i.ibb.co/qn3YMsh/960x0.jpg',
+        price: 60,
+        developer: 'People Can Fly',
+        publisher: 'Square Enix'
       },
       {
-        id: 6,
-        name: 'Palm Tree Cap',
-        imageUrl: 'https://i.ibb.co/rKBDvJX/palm-tree-cap.png',
-        price: 14
+        id: uuid(),
+        name: 'Gods And Monsters',
+        imageUrl: 'https://i.ibb.co/cXRcrRP/godsmonsters.png',
+        price: 55,
+        developer: 'Ubisoft Quebec',
+        publisher: 'Ubisoft'
       },
       {
-        id: 7,
-        name: 'Red Beanie',
-        imageUrl: 'https://i.ibb.co/bLB646Z/red-beanie.png',
-        price: 18
+        id: uuid(),
+        name: 'Skulls & Bones',
+        imageUrl: 'https://i.ibb.co/XCg6TBH/skull-and-bones.jpg',
+        price: 70,
+        developer: 'Ubisoft Singapore',
+        publisher: 'Ubisoft'
       },
       {
-        id: 8,
-        name: 'Wolf Cap',
-        imageUrl: 'https://i.ibb.co/1f2nWMM/wolf-cap.png',
-        price: 14
+        id: uuid(),
+        name: 'Ghostwire',
+        imageUrl: 'https://i.ibb.co/q5zJ5Qb/ghostwire.jpg',
+        price: 50,
+        developer: 'Tango Gameworks',
+        publisher: 'Bethesda Softworks'
       },
       {
-        id: 9,
-        name: 'Blue Snapback',
-        imageUrl: 'https://i.ibb.co/X2VJP2W/blue-snapback.png',
-        price: 16
+        id: uuid(),
+        name: 'Final Fantasy 7',
+        imageUrl: 'https://i.ibb.co/sWWJpQR/final-fantasy.jpg',
+        price: 40,
+        developer: 'Square Enix',
+        publisher: 'Square Enix'
+      },
+      {
+        id: uuid(),
+        name: 'Marvel Iron Man',
+        imageUrl: 'https://i.ibb.co/hKB8b2Y/iron-man.png',
+        price: 90,
+        developer: 'Camouflaj',
+        publisher: 'Sony Interactive'
       }
     ]
   },
-  sneakers: {
+  new: {
     id: 2,
-    title: 'Sneakers',
-    routeName: 'sneakers',
+    title: 'new',
+    routeName: 'new',
     items: [
       {
-        id: 10,
-        name: 'Adidas NMD',
-        imageUrl: 'https://i.ibb.co/0s3pdnc/adidas-nmd.png',
-        price: 220
+        id: uuid(),
+        name: 'Death Stranding',
+        imageUrl: 'https://i.ibb.co/kST3R9V/death.jpg',
+        price: 90,
+        developer: 'Kojima',
+        publisher: 'Kojima Productions'
       },
       {
-        id: 11,
-        name: 'Adidas Yeezy',
-        imageUrl: 'https://i.ibb.co/dJbG1cT/yeezy.png',
-        price: 280
+        id: uuid(),
+        name: 'Batman Arkham Knight',
+        imageUrl: 'https://i.ibb.co/jvJcRfB/batman.jpg',
+        price: 80,
+        developer: 'Rocksteady',
+        publisher: 'Warner Bros'
       },
       {
-        id: 12,
-        name: 'Black Converse',
-        imageUrl: 'https://i.ibb.co/bPmVXyP/black-converse.png',
-        price: 110
+        id: uuid(),
+        name: 'Days Gone',
+        imageUrl: 'https://i.ibb.co/dfkY3DZ/daysgone.jpg',
+        price: 85,
+        developer: 'SIE Bend Studio',
+        publisher: 'Sony Interactive'
       },
       {
-        id: 13,
-        name: 'Nike White AirForce',
-        imageUrl: 'https://i.ibb.co/1RcFPk0/white-nike-high-tops.png',
-        price: 160
+        id: uuid(),
+        name: 'Modern Warfare',
+        imageUrl: 'https://i.ibb.co/VHfKbhM/modern.jpg',
+        price: 60,
+        developer: 'Activision',
+        publisher: 'Activision'
       },
       {
-        id: 14,
-        name: 'Nike Red High Tops',
-        imageUrl: 'https://i.ibb.co/QcvzydB/nikes-red.png',
-        price: 160
+        id: uuid(),
+        name: 'Fifa 20',
+        imageUrl: 'https://i.ibb.co/3rRzbWv/1-fifa-20-eden-hazard.jpg',
+        price: 50,
+        developer: 'Electronic Arts',
+        publisher: 'Electronic Arts'
       },
       {
-        id: 15,
-        name: 'Nike Brown High Tops',
-        imageUrl: 'https://i.ibb.co/fMTV342/nike-brown.png',
-        price: 160
+        id: uuid(),
+        name: 'Star Wars Jedi',
+        imageUrl: 'https://i.ibb.co/4PpMzNV/star-wars-jedi-fallen-order.jpg',
+        price: 90,
+        developer: 'Electronic Arts',
+        publisher: 'Electronic Arts'
       },
       {
-        id: 16,
-        name: 'Air Jordan Limited',
-        imageUrl: 'https://i.ibb.co/w4k6Ws9/nike-funky.png',
-        price: 190
+        id: uuid(),
+        name: 'Ghost Recon Breakpoint',
+        imageUrl: 'https://i.ibb.co/16pV4Ds/5d71e9be3b0000e255d044cb.jpg',
+        price: 50,
+        developer: 'Ubisoft Paris',
+        publisher: 'Ubisoft'
       },
       {
-        id: 17,
-        name: 'Timberlands',
-        imageUrl: 'https://i.ibb.co/Mhh6wBg/timberlands.png',
-        price: 200
+        id: uuid(),
+        name: 'Tomb Raider Definitve',
+        imageUrl: 'https://i.ibb.co/RHccC25/tombraider.jpg',
+        price: 60,
+        developer: 'Square Enix',
+        publisher: 'Square Enix'
+      },
+      {
+        id: uuid(),
+        name: 'Apex Legends',
+        imageUrl: 'https://i.ibb.co/sPjypCc/apex.jpg',
+        price: 40,
+        developer: 'Electronic Arts',
+        publisher: 'Electronic Arts'
       }
     ]
   },
-  jackets: {
+  simulation: {
     id: 3,
-    title: 'Jackets',
-    routeName: 'jackets',
+    title: 'Simulation',
+    routeName: 'simulation',
     items: [
       {
-        id: 18,
-        name: 'Black Jean Shearling',
-        imageUrl: 'https://i.ibb.co/XzcwL5s/black-shearling.png',
-        price: 125
+        id: uuid(),
+        name: 'Read Dead Redemption 2',
+        imageUrl: 'https://i.ibb.co/7r7RJ5D/reddead.jpg',
+        price: 100,
+        developer: 'Rockstar Games',
+        publisher: 'Rockstar Games'
       },
       {
-        id: 19,
-        name: 'Blue Jean Jacket',
-        imageUrl: 'https://i.ibb.co/mJS6vz0/blue-jean-jacket.png',
-        price: 90
+        id: uuid(),
+        name: 'Grand Theft Auto',
+        imageUrl: 'https://i.ibb.co/VCJqVc9/GTA-5-Lamar-2.jpg',
+        price: 90,
+        developer: 'Rockstar Games',
+        publisher: 'Rockstar Games'
       },
       {
-        id: 20,
-        name: 'Grey Jean Jacket',
-        imageUrl: 'https://i.ibb.co/N71k1ML/grey-jean-jacket.png',
-        price: 90
+        id: uuid(),
+        name: 'Assassin Creed Origins',
+        imageUrl: 'https://i.ibb.co/jrHmPqm/assassins-creed-origins10.jpg',
+        price: 80,
+        developer: 'Ubisoft',
+        publisher: 'Ubisoft'
       },
       {
-        id: 21,
-        name: 'Brown Shearling',
-        imageUrl: 'https://i.ibb.co/s96FpdP/brown-shearling.png',
-        price: 165
+        id: uuid(),
+        name: 'The Witcher 3',
+        imageUrl: 'https://i.ibb.co/bgK6SHM/witcherww.jpg',
+        price: 90,
+        developer: 'CD Projekt',
+        publisher: 'CD Projekt'
       },
       {
-        id: 22,
-        name: 'Tan Trench',
-        imageUrl: 'https://i.ibb.co/M6hHc3F/brown-trench.png',
-        price: 185
+        id: uuid(),
+        name: 'Just Cause 4',
+        imageUrl: 'https://i.ibb.co/KsFxV7Z/just-cause-4-ps4-800x600-4.jpg',
+        price: 70,
+        developer: 'Avalanche Studios',
+        publisher: 'Square Enix'
+      },
+      {
+        id: uuid(),
+        name: 'Watch Dogs 2',
+        imageUrl:
+          'https://i.ibb.co/LYHWF4d/https-blogs-images-forbes-com-insertcoin-files-2016-11-watch-dogs8.jpg',
+        price: 60,
+        developer: 'Ubisoft',
+        publisher: 'Ubisoft'
+      },
+      {
+        id: uuid(),
+        name: 'Far Cry 5',
+        imageUrl: 'https://i.ibb.co/kc6CmCZ/farcry.jpg',
+        price: 80,
+        developer: 'Ubisoft',
+        publisher: 'Ubisoft'
+      },
+      {
+        id: uuid(),
+        name: 'Saints Row 4',
+        imageUrl: 'https://i.ibb.co/VLdr0mS/saintsrow.jpg',
+        price: 55,
+        developer: 'Deep Silver',
+        publisher: 'Deep Silver'
+      },
+      {
+        id: uuid(),
+        name: "No Man's Sky",
+        imageUrl: 'https://i.ibb.co/g4ShQzx/nomansky.jpg',
+        price: 60,
+        developer: 'Hello Games',
+        publisher: 'Hello Games'
+      },
+      {
+        id: uuid(),
+        name: 'Dying Light',
+        imageUrl:
+          'https://i.ibb.co/qMxZjhn/Dying-light-2-rimandato-696x392.jpg',
+        price: 75,
+        developer: 'Techland',
+        publisher: 'Warner Bros'
       }
     ]
   },
-  womens: {
+  action: {
     id: 4,
-    title: 'Womens',
-    routeName: 'womens',
+    title: 'Action',
+    routeName: 'action',
     items: [
       {
-        id: 23,
-        name: 'Blue Tanktop',
-        imageUrl: 'https://i.ibb.co/7CQVJNm/blue-tank.png',
-        price: 25
+        id: uuid(),
+        name: "Marvel's Spiderman",
+        imageUrl: 'https://i.ibb.co/xmZ1YhV/spider-man-header-suits.jpg',
+        price: 100,
+        developer: 'Marvel',
+        publisher: 'Sony Interactive'
       },
       {
-        id: 24,
-        name: 'Floral Blouse',
-        imageUrl: 'https://i.ibb.co/4W2DGKm/floral-blouse.png',
-        price: 20
+        id: uuid(),
+        name: 'Middle Earth: SOM',
+        imageUrl: 'https://i.ibb.co/vqSBZGn/showdow.jpg',
+        price: 80,
+        developer: 'Monolith Productions',
+        publisher: 'Warner Bros'
       },
       {
-        id: 25,
-        name: 'Floral Dress',
-        imageUrl: 'https://i.ibb.co/KV18Ysr/floral-skirt.png',
-        price: 80
+        id: uuid(),
+        name: 'Bloodborne',
+        imageUrl: 'https://i.ibb.co/MyzY0yv/bloodborne.jpg',
+        price: 60,
+        developer: 'Sony',
+        publisher: 'Sony'
       },
       {
-        id: 26,
-        name: 'Red Dots Dress',
-        imageUrl: 'https://i.ibb.co/N3BN1bh/red-polka-dot-dress.png',
-        price: 80
+        id: uuid(),
+        name: 'Bloodborne',
+        imageUrl: 'https://i.ibb.co/MyzY0yv/bloodborne.jpg',
+        price: 90,
+        developer: 'Sony',
+        publisher: 'Sony'
       },
       {
-        id: 27,
-        name: 'Striped Sweater',
-        imageUrl: 'https://i.ibb.co/KmSkMbH/striped-sweater.png',
-        price: 45
+        id: uuid(),
+        name: 'God of War 4',
+        imageUrl:
+          'https://i.ibb.co/DKfR1K0/god-of-war-listing-thumb-01-ps4-eu-19jun17.png',
+        price: 60,
+        developer: 'Sony Interactive',
+        publisher: 'Sony Interactive'
       },
       {
-        id: 28,
-        name: 'Yellow Track Suit',
-        imageUrl: 'https://i.ibb.co/v1cvwNf/yellow-track-suit.png',
-        price: 135
+        id: uuid(),
+        name: 'Far Cry Primal',
+        imageUrl:
+          'https://i.ibb.co/0n75f05/fc5-ubicom-search-thumbnail-mobile-221096.jpg',
+        price: 75,
+        developer: 'Ubisoft',
+        publisher: 'Ubisoft'
       },
       {
-        id: 29,
-        name: 'White Blouse',
-        imageUrl: 'https://i.ibb.co/qBcrsJg/white-vest.png',
-        price: 20
+        id: uuid(),
+        name: 'Nier Automata',
+        imageUrl: 'https://i.ibb.co/mN6nR5j/1-nier-automata-lucie-malecot.jpg',
+        price: 50,
+        developer: 'PlatinumGames',
+        publisher: 'Square Enix'
+      },
+      {
+        id: uuid(),
+        name: 'Tekken 7',
+        imageUrl:
+          'https://i.ibb.co/Jzb7zvz/c85d18e0940e4fe08bc5a6ecf04181c9-Large.png',
+        price: 40,
+        developer: 'Namco',
+        publisher: 'Namco'
+      },
+      {
+        id: uuid(),
+        name: 'Sniper Elite 4',
+        imageUrl: 'https://i.ibb.co/9gyqrSh/sniper.jpg',
+        price: 45,
+        developer: 'Rebellion',
+        publisher: 'Rebellion Developments'
+      },
+      {
+        id: uuid(),
+        name: 'Yakuza 4',
+        imageUrl: 'https://i.ibb.co/NVjf8XX/Yakuza41.jpg',
+        price: 65,
+        developer: 'Sega',
+        publisher: 'Sega'
       }
     ]
   },
-  mens: {
+  horror: {
     id: 5,
-    title: 'Mens',
-    routeName: 'mens',
+    title: 'Horror',
+    routeName: 'horror',
     items: [
       {
-        id: 30,
-        name: 'Camo Down Vest',
-        imageUrl: 'https://i.ibb.co/xJS0T3Y/camo-vest.png',
-        price: 325
+        id: uuid(),
+        name: 'Biohazard',
+        imageUrl: 'https://i.ibb.co/txN073g/re7-mia.png',
+        price: 80,
+        developer: 'Capcom',
+        publisher: 'Capcom'
       },
       {
-        id: 31,
-        name: 'Floral T-shirt',
-        imageUrl: 'https://i.ibb.co/qMQ75QZ/floral-shirt.png',
-        price: 20
+        id: uuid(),
+        name: 'Resident Evil 2',
+        imageUrl: 'https://i.ibb.co/yX75by2/re2-announce-screen-04.png',
+        price: 90,
+        developer: 'Capcom',
+        publisher: 'Capcom'
       },
       {
-        id: 32,
-        name: 'Black & White Longsleeve',
-        imageUrl: 'https://i.ibb.co/55z32tw/long-sleeve.png',
-        price: 25
+        id: uuid(),
+        name: 'Remothered: Broken Porcelain',
+        imageUrl: 'https://i.ibb.co/dL4nG8j/brokenporcelain.jpg',
+        price: 75,
+        developer: 'Chris Darril',
+        publisher: 'Stormind Games'
       },
       {
-        id: 33,
-        name: 'Pink T-shirt',
-        imageUrl: 'https://i.ibb.co/RvwnBL8/pink-shirt.png',
-        price: 25
+        id: uuid(),
+        name: 'Blair Witch',
+        imageUrl:
+          'https://i.ibb.co/nsN4QHK/Blair-Witch-Gameplay-Walkthrough.jpg',
+        price: 90,
+        developer: 'Lionsgate Games',
+        publisher: 'Lionsgate Games'
       },
       {
-        id: 34,
-        name: 'Jean Long Sleeve',
-        imageUrl: 'https://i.ibb.co/VpW4x5t/roll-up-jean-shirt.png',
-        price: 40
+        id: uuid(),
+        name: 'Layers Of Fear 2',
+        imageUrl: 'https://i.ibb.co/xYxRLRN/layers-of-fear-2-17a4g.jpg',
+        price: 60,
+        developer: 'Gun Media',
+        publisher: 'Gun Media'
       },
       {
-        id: 35,
-        name: 'Burgundy T-shirt',
-        imageUrl: 'https://i.ibb.co/mh3VM1f/polka-dot-shirt.png',
-        price: 25
+        id: uuid(),
+        name: 'Visage',
+        imageUrl:
+          'https://i.ibb.co/KsW5V6p/visage-pt-klon-1st-person-horror-900x506.jpg',
+        price: 55,
+        developer: 'SadSquare Studio',
+        publisher: 'SadSquare Studio'
+      },
+      {
+        id: uuid(),
+        name: 'The Evil Within 2',
+        imageUrl: 'https://i.ibb.co/K6fjXsS/stefanoevilwithin2.jpg',
+        price: 40,
+        developer: 'Tango Gameworks',
+        publisher: 'Bethesda'
+      },
+      {
+        id: uuid(),
+        name: 'Silent hill PT',
+        imageUrl:
+          'https://i.ibb.co/QXJKvBG/https-blogs-images-forbes-com-erikkain-files-2019-09-PT-Game.jpg',
+        price: 200,
+        developer: 'Konami',
+        publisher: 'Konami'
+      }
+    ]
+  },
+  racing: {
+    id: 5,
+    title: 'Racing',
+    routeName: 'racing',
+    items: [
+      {
+        id: uuid(),
+        name: 'Forza Horizon 4',
+        imageUrl:
+          'https://i.ibb.co/0Mft609/https-blogs-images-forbes-com-davidthier-files-2018-10-apps-40220-14249457320767201-9d3637cc-1f1d-46f2-9a98-99fd003390c8-1200x674.jpg',
+        price: 80,
+        developer: 'Turn 10 studios',
+        publisher: 'Turn 10 studios'
+      },
+      {
+        id: uuid(),
+        name: 'Assetto Corsa',
+        imageUrl:
+          'https://i.ibb.co/hHmK6vw/assetto-corsa-ps4-smartcdkeys-cheap-cd-key-4-800x450.jpg',
+        price: 50,
+        developer: '505 Games',
+        publisher: '505 Games'
+      },
+      {
+        id: uuid(),
+        name: 'Real Racing 3',
+        imageUrl: 'https://i.ibb.co/7S9qXDj/1-X0-W6095.jpg',
+        price: 40,
+        developer: 'Electronic Arts',
+        publisher: 'Electronic Arts'
+      },
+      {
+        id: uuid(),
+        name: 'Asphalt 9: Legends',
+        imageUrl: 'https://i.ibb.co/NsLFdcs/UNADJUSTEDNONRAW-thumb-198b.jpg',
+        price: 90,
+        developer: 'EA Sports',
+        publisher: 'Electronic Arts'
+      },
+      {
+        id: uuid(),
+        name: 'Need For Speed',
+        imageUrl:
+          'https://i.ibb.co/SXfymhh/apps-2950-69435230515002378-af86836f-c697-4e65-bba8-ba1d504754e2.jpg',
+        price: 70,
+        developer: 'Ghost Games',
+        publisher: 'Ghost Games'
+      },
+      {
+        id: uuid(),
+        name: 'DiRT 4',
+        imageUrl: 'https://i.ibb.co/jfHBfnY/dirt-4-free-download.jpg',
+        price: 65,
+        developer: 'Feral Interactive',
+        publisher: 'Feral Interactive'
+      },
+      {
+        id: uuid(),
+        name: 'F1 2018',
+        imageUrl:
+          'https://i.ibb.co/ynfjwKZ/67e11e1926e82ac917fd8ccc0dc9a2f9.jpg',
+        price: 20,
+        developer: 'Codemasters',
+        publisher: 'Eden Games'
+      },
+      {
+        id: uuid(),
+        name: 'CSR Racing 2',
+        imageUrl: 'https://i.ibb.co/hYXkFz2/csr2-2-min.jpg',
+        price: 50,
+        developer: 'NaturalMotion',
+        publisher: 'NaturalMotion'
       }
     ]
   }
