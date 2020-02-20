@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { addItem } from './../../redux/cart/cart.actions';
+import addToCart from './../../assets/addToCart.png';
 
 import {
   CollectionItemContainer,
   CollectionFooterContainer,
   AddButton,
-  BackgroundImage,
+  DetailContainer,
   NameContainer,
   PriceContainer
 } from './CollectionItem.styles';
@@ -14,18 +15,36 @@ import {
 const CollectionItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
   return (
-    <CollectionItemContainer>
-      <BackgroundImage style={{ backgroundImage: `url(${imageUrl})` }} />
+    <CollectionItemContainer imageUrl={imageUrl}>
+      <AddButton onClick={() => addItem(item)} inverted={true}>
+        <img src={addToCart} alt="Add to Cart" />
+      </AddButton>
       <CollectionFooterContainer>
         <NameContainer>{name}</NameContainer>
-        <PriceContainer>{price}</PriceContainer>
+        <PriceContainer>${price}</PriceContainer>
+        <DetailContainer>
+          Developed by NetherRealm Studios and published by Warner Bros.
+        </DetailContainer>
       </CollectionFooterContainer>
-      <AddButton onClick={() => addItem(item)} inverted={true}>
-        ADD TO CART
-      </AddButton>
     </CollectionItemContainer>
   );
 };
+
+// const CollectionItem = ({ item, addItem }) => {
+//   const { name, price, imageUrl } = item;
+//   return (
+//     <CollectionItemContainer>
+//       <BackgroundImage style={{ backgroundImage: `url(${imageUrl})` }} />
+//       <CollectionFooterContainer>
+//         <NameContainer>{name}</NameContainer>
+//         <PriceContainer>{price}</PriceContainer>
+//       </CollectionFooterContainer>
+//       <AddButton onClick={() => addItem(item)} inverted={true}>
+//         ADD TO CART
+//       </AddButton>
+//     </CollectionItemContainer>
+//   );
+// };
 
 const mapDispatchToProps = dispatch => ({
   addItem: item => dispatch(addItem(item))
