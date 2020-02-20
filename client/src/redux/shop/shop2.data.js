@@ -439,7 +439,7 @@ const SHOP_DATA = {
         name: 'Assetto Corsa',
         imageUrl:
           'https://i.ibb.co/hHmK6vw/assetto-corsa-ps4-smartcdkeys-cheap-cd-key-4-800x450.jpg',
-        price: 80,
+        price: 50,
         developer: '505 Games',
         publisher: '505 Games'
       },
@@ -447,7 +447,7 @@ const SHOP_DATA = {
         id: uuid(),
         name: 'Real Racing 3',
         imageUrl: 'https://i.ibb.co/7S9qXDj/1-X0-W6095.jpg',
-        price: 80,
+        price: 40,
         developer: 'Electronic Arts',
         publisher: 'Electronic Arts'
       },
@@ -455,7 +455,7 @@ const SHOP_DATA = {
         id: uuid(),
         name: 'Asphalt 9: Legends',
         imageUrl: 'https://i.ibb.co/NsLFdcs/UNADJUSTEDNONRAW-thumb-198b.jpg',
-        price: 80,
+        price: 90,
         developer: 'EA Sports',
         publisher: 'Electronic Arts'
       },
@@ -464,7 +464,7 @@ const SHOP_DATA = {
         name: 'Need For Speed',
         imageUrl:
           'https://i.ibb.co/SXfymhh/apps-2950-69435230515002378-af86836f-c697-4e65-bba8-ba1d504754e2.jpg',
-        price: 80,
+        price: 70,
         developer: 'Ghost Games',
         publisher: 'Ghost Games'
       },
@@ -472,7 +472,7 @@ const SHOP_DATA = {
         id: uuid(),
         name: 'DiRT 4',
         imageUrl: 'https://i.ibb.co/jfHBfnY/dirt-4-free-download.jpg',
-        price: 80,
+        price: 65,
         developer: 'Feral Interactive',
         publisher: 'Feral Interactive'
       },
@@ -481,7 +481,7 @@ const SHOP_DATA = {
         name: 'F1 2018',
         imageUrl:
           'https://i.ibb.co/ynfjwKZ/67e11e1926e82ac917fd8ccc0dc9a2f9.jpg',
-        price: 80,
+        price: 20,
         developer: 'Codemasters',
         publisher: 'Eden Games'
       },
@@ -489,7 +489,7 @@ const SHOP_DATA = {
         id: uuid(),
         name: 'CSR Racing 2',
         imageUrl: 'https://i.ibb.co/hYXkFz2/csr2-2-min.jpg',
-        price: 80,
+        price: 50,
         developer: 'NaturalMotion',
         publisher: 'NaturalMotion'
       }
