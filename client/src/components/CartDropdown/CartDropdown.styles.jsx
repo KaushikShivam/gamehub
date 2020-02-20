@@ -3,15 +3,16 @@ import CustomButton from './../CustomButton/CustomButton';
 
 export const CartDropdownContainer = styled.div`
   position: absolute;
-  width: 240px;
+  width: 270px;
   height: 340px;
   display: flex;
   flex-direction: column;
   padding: 20px;
   border: 1px solid black;
-  background-color: white;
-  top: 90px;
-  right: 40px;
+  background-color: #132047;
+  border: 1px solid white;
+  top: 80px;
+  right: 30px;
   z-index: 5;
 `;
 
