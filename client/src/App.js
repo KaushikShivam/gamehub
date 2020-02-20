@@ -14,7 +14,7 @@ import Header from './components/Header/Header';
 import { selectCurrentUser } from './redux/user/user.selectors';
 import { checkUserSession } from './redux/user/user.actions';
 
-const App = ({ checkUserSession, currentUser, collectionsArray }) => {
+const App = ({ checkUserSession, currentUser }) => {
   // unsubscribeFromAuth = null;
 
   useEffect(() => {
