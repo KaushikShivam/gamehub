@@ -17,7 +17,7 @@ import {
   PlayLogo
 } from './MenuItem.styles';
 
-const roles = ['Most Rated', 'Popular'];
+const roles = ['Top Rated', 'Popular'];
 
 const MenuItem = ({
   title,

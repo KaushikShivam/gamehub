@@ -1,13 +1,13 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: 'pre-order',
+      title: 'upcoming',
       imageUrl: 'https://i.ibb.co/qDwgM6x/pre-order.png',
       description:
         'Pre-order the hottest games to get exclusive DLC and bonus content',
       size: 'large',
       id: 1,
-      linkUrl: 'shop/pre-order'
+      linkUrl: 'shop/upcoming'
     },
     {
       title: 'new',
@@ -18,11 +18,11 @@ const INITIAL_STATE = {
       linkUrl: 'shop/new'
     },
     {
-      title: 'open world',
+      title: 'simulation',
       imageUrl: 'https://i.ibb.co/vzcJPMV/open.png',
-      description: 'Role-playing | Simulation | First Person',
+      description: 'Role-playing | Open World | First Person',
       id: 3,
-      linkUrl: 'shop/open-world'
+      linkUrl: 'shop/simulation'
     },
     {
       title: 'action',
