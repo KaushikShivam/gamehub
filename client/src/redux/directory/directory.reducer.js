@@ -1,42 +1,49 @@
 const INITIAL_STATE = {
   sections: [
     {
-      title: 'womens',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      title: 'upcoming',
+      imageUrl: 'https://i.ibb.co/qDwgM6x/pre-order.png',
+      description:
+        'Pre-order the hottest games to get exclusive DLC and bonus content',
       size: 'large',
-      id: 4,
-      linkUrl: 'shop/womens'
-    },
-    {
-      title: 'mens',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-      size: 'large',
-      id: 5,
-      linkUrl: 'shop/mens'
-    },
-    {
-      title: 'hats',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
       id: 1,
-      linkUrl: 'shop/hats'
+      linkUrl: 'shop/upcoming'
     },
     {
-      title: 'jackets',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      title: 'new',
+      imageUrl: 'https://i.ibb.co/cXD6BDh/new.png',
+      description: 'Hot new games that are available for you to buy right now!',
+      size: 'large',
       id: 2,
-      linkUrl: 'shop/jackets'
+      linkUrl: 'shop/new'
     },
     {
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      title: 'simulation',
+      imageUrl: 'https://i.ibb.co/vzcJPMV/open.png',
+      description: 'Role-playing | Open World | First Person',
       id: 3,
-      linkUrl: 'shop/sneakers'
+      linkUrl: 'shop/simulation'
     },
     {
-      title: 'sneakers',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      title: 'action',
+      imageUrl: 'https://i.ibb.co/D7wFyJJ/action.png',
+      description: 'Adventure | Shooting | Fighting | Adult',
       id: 4,
-      linkUrl: 'shop/sneakers'
+      linkUrl: 'shop/action'
+    },
+    {
+      title: 'horror',
+      imageUrl: 'https://i.ibb.co/ZB1xRW3/horror.png',
+      description: 'Survival | Strategy | Shooter',
+      id: 5,
+      linkUrl: 'shop/horror'
+    },
+    {
+      title: 'racing',
+      imageUrl: 'https://i.ibb.co/MVPW0x9/racing.jpg',
+      description: 'Racing | Cop Chase | Speed',
+      id: 6,
+      linkUrl: 'shop/racing'
     }
   ]
 };

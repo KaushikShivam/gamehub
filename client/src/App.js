@@ -17,21 +17,14 @@ const Shop = lazy(() => import('./pages/Shop/Shop'));
 const SignInSignUp = lazy(() => import('./pages/SignInSignUp/SignInSignUp'));
 
 const App = ({ checkUserSession, currentUser }) => {
-  // unsubscribeFromAuth = null;
-
   useEffect(() => {
     checkUserSession();
+    //Add data here
+    // addCollectionAndDocuments(
+    //   'collections',
+    //   collectionsArray.map(({ title, items }) => ({ title, items }))
+    // );
   }, [checkUserSession]);
-
-  // componentDidMount() {
-  //   checkUserSession();
-  //   // This is where you load the data
-  //   // addCollectionAndDocuments(
-  //   //   'collections',
-  //   //   collections.map(({ title, items }) => ({ title, items }))
-  //   // );
-  //   // });
-  // }
 
   return (
     <div>

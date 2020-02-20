@@ -17,9 +17,17 @@ import {
   PlayLogo
 } from './MenuItem.styles';
 
-const roles = ['Action', 'Role-playing'];
+const roles = ['Top Rated', 'Popular'];
 
-const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
+const MenuItem = ({
+  title,
+  imageUrl,
+  size,
+  description,
+  history,
+  linkUrl,
+  match
+}) => (
   <MenuItemContainer
     size={size}
     imageUrl={imageUrl}
@@ -36,10 +44,7 @@ const MenuItem = ({ title, imageUrl, size, history, linkUrl, match }) => (
       <ContentContainer size={size}>
         <TitleContainer>
           <ContentTitle size={size}>{title.toUpperCase()}</ContentTitle>
-          <ContentSubtitle>
-            Pre-order your games to get exclusive content to the DLCs and other
-            bonus content
-          </ContentSubtitle>
+          <ContentSubtitle>{description}</ContentSubtitle>
         </TitleContainer>
         <PlayLogo size={size}>
           <img src={size ? redIcon : blueIcon} alt="Play icon" />
