@@ -3,6 +3,7 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const path = require('path');
 const compression = require('compression');
+const enforce = require('express-sslify');
 
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
@@ -16,6 +17,7 @@ app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
+app.use(enforce.HTTPS({ trustProtoHeader: true }));
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, 'client/build')));
