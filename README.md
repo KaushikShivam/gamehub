@@ -13,7 +13,7 @@
 ## Description
 
 GameHub is an e-commerce web application built using the MERN stack and firebase that lets you buy video games online.
-The application using the following technologies
+The application uses the following technologies
 
 - ### Front-end -
   - `React`
