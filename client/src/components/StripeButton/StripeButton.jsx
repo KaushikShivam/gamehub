@@ -33,7 +33,7 @@ const StripeButton = ({ price }) => {
       name="GameHub Ltd."
       shippingAddress
       billingAddress
-      image="https://sendeyo.com/up/d/f3eb2117da"
+      image="https://i.ibb.co/1vpkSjK/gamehub192.png"
       description={`Your total is ${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
