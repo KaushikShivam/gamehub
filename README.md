@@ -66,9 +66,6 @@ npm run start
 ```
 
 ## Contact
-
-The project was done in collaboration with Rodolfo and Myself.
-
 You can contact me at:
 
 - [Portfolio](www.shivamkaushik.com)
